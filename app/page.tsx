@@ -125,7 +125,7 @@ export default function Home() {
         <th>Starting Chunk</th>
         <th>YouTube Channel Name</th>
       </tr>
-      {chunkers.filter(chunker => chunker.ruleset === 'Extreme').map((chunker) => (<tr key={chunker.osrs_username}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
+      {chunkers.filter(chunker => chunker.ruleset === 'Extreme').map((chunker) => (<tr key={chunker.yt_channel_name}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
       </tbody>
     </table>
 
@@ -137,7 +137,7 @@ export default function Home() {
         <th>Starting Chunk</th>
         <th>YouTube Channel Name</th>
       </tr>
-      {chunkers.filter(chunker => chunker.ruleset === 'Vanilla/Casual').map((chunker) => (<tr key={chunker.osrs_username}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
+      {chunkers.filter(chunker => chunker.ruleset === 'Vanilla/Casual').map((chunker) => (<tr key={chunker.yt_channel_name}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
       </tbody>
     </table>
 
@@ -149,7 +149,7 @@ export default function Home() {
         <th>Starting Chunk</th>
         <th>YouTube Channel Name</th>
       </tr>
-      {chunkers.filter(chunker => chunker.ruleset === 'Supreme').map((chunker) => (<tr key={chunker.osrs_username}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
+      {chunkers.filter(chunker => chunker.ruleset === 'Supreme').map((chunker) => (<tr key={chunker.yt_channel_name}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
       </tbody>
     </table>
     
@@ -161,7 +161,7 @@ export default function Home() {
         <th>Starting Chunk</th>
         <th>YouTube Channel Name</th>
       </tr>
-      {chunkers.filter(chunker => chunker.ruleset === 'Specialized').map((chunker) => (<tr key={chunker.osrs_username}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
+      {chunkers.filter(chunker => chunker.ruleset === 'Specialized').map((chunker) => (<tr key={chunker.yt_channel_name}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
       </tbody>
     </table>
 
