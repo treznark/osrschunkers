@@ -119,7 +119,7 @@ export default function Register() {
         />
       </Head>
       <div className="flex flex-col m-auto min-w-400 max-w-600 justify-evenly text-center pb-8 shadow-2xl bg-slate-800">
-        <section className="w-8/12 mx-auto flex flex-col gap-5">
+        <section className="w-3/4 mx-auto flex flex-col gap-5">
           <div className="title">
             <h1 className="text-5xl pt-4">
               REGISTER

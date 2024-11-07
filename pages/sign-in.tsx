@@ -9,7 +9,7 @@ import { string, z } from "zod";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { GetServerSidePropsContext } from "next";
-import { authOptions } from "./api/auth/[...nextauth]";
+import authOptions from "@/pages/api/auth/[...nextauth]";
 import { getServerSession } from "next-auth/next";
 
 const RegisterSchema = z.object({
@@ -59,24 +59,20 @@ export default function SignInPage() {
   }
 
   return (
-    <div className="flex h-full bg-slate-50 py-10">
+    <div className="w-full md:w-1/2 mx-auto mt-10">
       <Head>
         <title>Sign In</title>
         <meta
           name="description"
-          content="Sign in to track your progress through our courses, lessons, and code exercises."
+          content="Sign in to your account.."
         />
       </Head>
-      <div className="flex flex-col m-auto rounded-md min-w-400 max-w-600 justify-evenly text-center py-10 shadow-2xl">
-        <section className="w-10/12 mx-auto flex flex-col gap-5">
+      <div className="flex flex-col m-auto min-w-400 max-w-600 justify-evenly text-center pb-8 shadow-2xl bg-slate-800">
+        <section className="w-3/4 mx-auto flex flex-col gap-5">
           <div className="title">
-            <h1 className="text-gray-800 text-3xl font-bold py-4">
-              Sign in to your account
+            <h1 className="text-5xl pt-4">
+              SIGN IN
             </h1>
-            <p className="w-3/4 mx-auto text-gray-400 ">
-              Sign in to track your progress through our courses, lessons, and
-              code exercises.
-            </p>
           </div>
           <form
             className="flex flex-col gap-5"
@@ -88,28 +84,28 @@ export default function SignInPage() {
             <div>
               <div className="text-red-500">{errors.email?.message}</div>
               <div className="text-red-500">{nextAuthError?.message}</div>
-              <div className="flex border rounded-xl">
+              <div className="flex">
                 <input
-                  className="w-full py-4 px-6 border-none rounded-xl bg-slate-50 focus:outline-none"
+                  className="w-full py-4 px-6 text-lg text-slate-50 bg-slate-800 border-2 border-solid border-slate-600 focus:outline-none"
                   placeholder="Email"
                   {...register("email")}
                 />
-                <span className="icon flex items-center px-4 text-xl text-gray-400">
+                <span className="icon flex items-center justify-center px-4 text-2xl text-slate-800 bg-slate-600 min-w-[60px]">
                   <FontAwesomeIcon icon={faAt} />
                 </span>
               </div>
             </div>
             <div>
               <div className="text-red-500">{errors.password?.message}</div>
-              <div className="flex border rounded-xl">
+              <div className="flex">
                 <input
                   type={`${show ? "text" : "password"}`}
                   placeholder="Password"
-                  className="w-full py-4 px-6 border-none rounded-xl bg-slate-50 focus:outline-none"
+                  className="w-full py-4 px-6 text-lg text-slate-50 bg-slate-800 border-2 border-solid border-slate-600 focus:outline-none"
                   {...register("password")}
                 />
                 <span
-                  className="icon flex items-center px-4 text-xl text-gray-400 cursor-pointer"
+                  className="icon flex items-center justify-center px-4 text-2xl text-slate-800 bg-slate-600 cursor-pointer min-w-[60px]"
                   onClick={() => setShow(!show)}
                 >
                   {show && <FontAwesomeIcon icon={faEye} />}
@@ -117,16 +113,16 @@ export default function SignInPage() {
                 </span>
               </div>
             </div>
-            <div className="input-button">
+            <div className="input-button mt-5">
               <button
                 type="submit"
-                className="w-full rounded-md py-3 text-gray-50 text-lg bg-gradient-to-r from-cyan-400 to-violet-500 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-violet-600"
+                className="w-[200px] rounded-md py-3 text-slate-50 text-xl bg-blue-500 hover:bg-blue-600"
               >
                 SIGN IN
               </button>
             </div>
           </form>
-          <p className="text-center text-gray-400">
+          <p className="text-center text-slate-500 mt-3">
             Don&apos;t have an account yet?
             <Link
               href={"/register"}
