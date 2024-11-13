@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 import { SessionProvider } from "next-auth/react";
+import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import { AppProps } from "next/app";
 
 export default function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
