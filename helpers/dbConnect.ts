@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const MONGODB_URI = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTERNAME}.${process.env.MONGODB_PROJECT}.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`;
-
+                     //mongodb+srv://treznark:<db_password>@cluster0.vaxsz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 if (!MONGODB_URI) {
   throw new Error("Please define the MONGODB_URI environment variable");
 }

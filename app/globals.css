@@ -84,11 +84,7 @@ h6 {
 
 a {
   color: #4f7bc8;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #9860cc;
+  text-decoration: none;
 }
 
 button {

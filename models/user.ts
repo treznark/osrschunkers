@@ -84,13 +84,6 @@ const userSchema = new Schema({
     type: String,
     maxLength: [80, "Website URL cannot be longer than 80 characters"],
   },
-  stripeCustomerId: {
-    type: String,
-    unique: [true, "A user with that stripeCustomerId already exists"],
-  },
-  stripeSubscriptionStatus: {
-    type: String,
-  },
 });
 
 // export type User = InferSchemaType<typeof userSchema> & {
@@ -114,8 +107,6 @@ export type User = {
   linkUrl: string;
   occupation: string;
   organization: string;
-  stripeCustomerId: string;
-  stripeSubscriptionStatus: string;
 };
 
 const UserModel = (models.User as Model<User>) || model(ModelName.User, userSchema);

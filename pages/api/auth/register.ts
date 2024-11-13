@@ -37,6 +37,7 @@ const handlePost = async (req: NextApiRequest, res: NextApiResponse<PostResponse
     role: "user",
     provider: provider,
   })).toObject() as User;
+
   user = transformObjectIds(user);
   res.status(201).json({ data: user });
 }

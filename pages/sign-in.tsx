@@ -42,7 +42,7 @@ export default function SignInPage() {
     });
     
     if (result?.ok) {
-      router.push("/profile");
+      router.push("/admin");
     } else {
       if (result?.error === "No user found!") {
         setNextAuthError({
@@ -144,7 +144,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   if (session) {
     return {
       redirect: {
-        destination: "/profile",
+        destination: "/admin",
         permanent: false,
       },
     };
