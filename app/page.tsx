@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Home() {
+export default async function Home() {
   const chunkers = [
     {osrs_username: 'Ardychunky', starting_chunk: 'Ardougne Market', yt_channel_name: 'Inoox', yt_channel_link: 'https://www.youtube.com/@inoox', ruleset: 'Vanilla/Casual' },
     {osrs_username: 'Ardylock', starting_chunk: 'Ardougne Market', yt_channel_name: 'PiatsaThunderhorn', yt_channel_link: 'https://www.youtube.com/@PiatsaThunderHorn', ruleset: 'Vanilla/Casual'},
@@ -110,14 +110,17 @@ export default function Home() {
     {osrs_username: 'ShiftyChunks', starting_chunk: 'Lumbridge', yt_channel_name: 'Shifty OSRS', yt_channel_link: 'https://www.youtube.com/@Shifty-osrs', ruleset: 'Specialized'},
     {osrs_username: 'XtremeTwin', starting_chunk: 'Lumbridge', yt_channel_name: 'What If Rune', yt_channel_link: 'https://www.youtube.com/@WhatIfRune', ruleset: 'Specialized'},
     {osrs_username: 'Zone Zoomer', starting_chunk: 'Rimmington', yt_channel_name: 'Ectograss', yt_channel_link: 'https://www.youtube.com/@Ectograss', ruleset: 'Specialized'},
-
   ]
+
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/chunkers`, {method: 'GET'})
+  //   const chunkers = await res.json()
+  //   console.log("CHUNKERS", chunkers)
 
   return (
     <div className='w-full p-5'>
       <h1>OSRS Chunk Locked YouTube Series</h1>
 
-    <h2>Extreme</h2>
+    {/* <h2>Extreme</h2>
     <table className='w-full'>
     <tbody>
       <tr>
@@ -163,7 +166,7 @@ export default function Home() {
       </tr>
       {chunkers.filter(chunker => chunker.ruleset === 'Specialized').map((chunker) => (<tr key={chunker.yt_channel_name}><td><Link href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}>{chunker.osrs_username}</Link></td><td>{chunker.starting_chunk}</td><td><Link href={chunker.yt_channel_link}>{chunker.yt_channel_name}</Link></td></tr>))}
       </tbody>
-    </table>
+    </table> */}
 
     </div>
   );

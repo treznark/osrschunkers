@@ -1,9 +1,9 @@
-import dbConnect from "@/helpers/dbConnect";
+import dbConnect from "@/app/lib/utils/dbConnect";
 import { NextApiRequest, NextApiResponse } from "next";
-import { hashPassword } from "@/helpers/auth";
+import { hashPassword } from "@/app/lib/helpers/auth";
 import UserModel, { User } from "@/models/user";
 import { ApiResponse } from "@/types/api";
-import { transformObjectIds } from "@/helpers/db";
+import { transformObjectIds } from "@/app/lib/utils/db";
 
 type PostResponse = ApiResponse<User>;
 

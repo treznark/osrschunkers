@@ -1,5 +1,8 @@
 import { Schema, InferSchemaType, model, models, Model } from "mongoose";
-import { ModelName } from "@/models";
+// import ModelName from "@/lib/constants/modelNames";
+import ModelName from "@/models/all";
+// import { ModelName } from "@/models";
+// import ModelName from "@/lib/constants/modelNames";
 
 // Note: Reference these docs for more information on using Mongoose schemas
 // withTypeScript: https://mongoosejs.com/docs/typescript/schemas.html

@@ -1,7 +1,7 @@
 import NextAuth, { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { verifyPassword } from "@/helpers/auth";
-import dbConnect from "@/helpers/dbConnect";
+import { verifyPassword } from "@/app/lib/helpers/auth";
+import dbConnect from "@/app/lib/utils/dbConnect";
 import UserModel from "@/models/user";
 
 export const authOptions: AuthOptions = {
