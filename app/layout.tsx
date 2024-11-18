@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Footer from "@/components/layout/Footer";
-// import Header from "@/components/layout/Header";
+import Header from "@/components/layout/Header";
 import "./globals.css";
 
 // // The following import prevents a Font Awesome icon server-side rendering bug,
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <Header /> */}
+        <Header />
         {children}
         <div id="modal-root" />
         <Footer />
