@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+// import Header from "@/components/layout/Header";
 import "./globals.css";
 
-// The following import prevents a Font Awesome icon server-side rendering bug,
-// where the icons flash from a very large icon down to a properly sized one:
-import '@fortawesome/fontawesome-svg-core/styles.css';
-// Prevent fontawesome from adding its CSS since we did it manually above:
-import { config } from '@fortawesome/fontawesome-svg-core';
-config.autoAddCss = false; /* eslint-disable import/first */
-
+// // The following import prevents a Font Awesome icon server-side rendering bug,
+// // where the icons flash from a very large icon down to a properly sized one:
+// import '@fortawesome/fontawesome-svg-core/styles.css';
+// // Prevent fontawesome from adding its CSS since we did it manually above:
+// import { config } from '@fortawesome/fontawesome-svg-core';
+// config.autoAddCss = false; /* eslint-disable import/first */
 
 export const metadata: Metadata = {
   title: "OSRS Chunkers",
-  description: "Browse OSRS Chunk Locked YouTube accounts. Follow your favorite chunkers, track their progress and discover new or unknown creators.",
+  description:
+    "Browse OSRS Chunk Locked YouTube accounts. Follow your favorite chunkers, track their progress and discover new or unknown creators.",
 };
 
 export default function RootLayout({
@@ -24,8 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-          {children}
+        {/* <Header /> */}
+        {children}
+        <div id="modal-root" />
         <Footer />
       </body>
     </html>

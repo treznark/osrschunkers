@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faGear,
-  faRightFromBracket,
-} from "@fortawesome/free-solid-svg-icons";
+// import Link from "next/link";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faUser,
+//   faGear,
+//   faRightFromBracket,
+// } from "@fortawesome/free-solid-svg-icons";
 
 const MainHeader = () => {
   return (

@@ -1,8 +1,8 @@
 
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+// import { faGithub } from "@fortawesome/free-brands-svg-icons";
 // import ToastContext from "@/store/BottomToastContext";
 // import { ApiResponse } from "@/types/api";
 // import { Subscriber } from "@/models/subscriber";
@@ -67,10 +67,10 @@ function Footer() {
     <div className='flex flex-row gap-2 items-center justify-center border-t border-gray-800 text-gray-600'>
         <p>Built by Treznark.</p> 
         <Link href="https://twitter.com/Treznark">
-            <FontAwesomeIcon icon={faTwitter} className='text-gray-600' />
+            {/* <FontAwesomeIcon icon={faTwitter} className='text-gray-600' /> */}
         </Link>
         <Link href="https://github.com/Treznark">
-            <FontAwesomeIcon icon={faGithub} className='text-gray-600' />
+            {/* <FontAwesomeIcon icon={faGithub} className='text-gray-600' /> */}
         </Link>
     </div>
     
