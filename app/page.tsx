@@ -16,7 +16,7 @@ export default async function Home() {
 
   return (
     <main className="w-full p-5">
-      <h1>Browse OSRS Chunk Locked Creators</h1>
+      <h1>Browse OSRS Chunk Locked Creators - Coming Soon</h1>
 
       {chunkers.map((chunker) => (
         <div key={chunker.id}>{chunker.osrs_username}</div>
