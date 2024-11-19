@@ -130,8 +130,13 @@ tr {
   /* height: 3rem; */
 }
 
+tr:first-child {
+  padding-left: 0.5rem;
+}
+
 td {
-  padding: 0.8rem 0.5rem;
+  min-height: 3rem;
+  padding: 0 0.5rem;
 }
 
 tbody tr:nth-child(odd) {

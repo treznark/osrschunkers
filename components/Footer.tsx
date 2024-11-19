@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 // import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -63,13 +64,20 @@ function Footer() {
   //   };
 
   return (
-    <div className="flex flex-row gap-2 items-center justify-center border-t-2 border-gray-800 text-gray-600">
-      <p>Built by Treznark.</p>
-      <Link href="https://twitter.com/Treznark">
-        {/* <FontAwesomeIcon icon={faTwitter} className='text-gray-600' /> */}
+    <div className="flex flex-row gap-2 items-center justify-center border-t-2 border-gray-800 text-gray-600 pt-2">
+      <p>BUILT BY TREZNARK:</p>
+      <Link
+        href="https://twitter.com/Treznark"
+        className="text-[15px] bg-gray-700 rounded-md px-[0.4rem] py-[0.035rem] hover:bg-gray-600"
+        style={{ color: "black" }}
+      >
+        𝕏
       </Link>
-      <Link href="https://github.com/Treznark">
-        {/* <FontAwesomeIcon icon={faGithub} className='text-gray-600' /> */}
+      <Link
+        href="https://github.com/Treznark"
+        className="bg-gray-700 rounded-md p-1 hover:bg-gray-600"
+      >
+        <Image src="/img/github_logo.png" alt="github" width={16} height={16} />
       </Link>
     </div>
   );

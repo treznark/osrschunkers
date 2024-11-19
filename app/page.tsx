@@ -50,7 +50,7 @@ export default async function Home() {
             </th>
           </tr>
           {chunkers.map((chunker) => (
-            <tr key={chunker.yt_channel_name}>
+            <tr key={chunker.yt_channel_name} className="gap-1">
               <td>
                 <Link
                   href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}
@@ -95,128 +95,6 @@ export default async function Home() {
           ))}
         </tbody>
       </table>
-
-      {/* <h1>OSRS Chunk Locked YouTube Series</h1>
-
-      <h2>Extreme</h2>
-      <table className="w-full">
-        <tbody>
-          <tr>
-            <th>OSRS Username</th>
-            <th>Starting Chunk</th>
-            <th>YouTube Channel Name</th>
-          </tr>
-          {chunkers
-            .filter((chunker) => chunker.ruleset === "Extreme")
-            .map((chunker) => (
-              <tr key={chunker.yt_channel_name}>
-                <td>
-                  <Link
-                    href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}
-                  >
-                    {chunker.osrs_username}
-                  </Link>
-                </td>
-                <td>{chunker.starting_chunk}</td>
-                <td>
-                  <Link href={chunker.yt_channel_link}>
-                    {chunker.yt_channel_name}
-                  </Link>
-                </td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
-
-      <h2>Vanilla/Casual</h2>
-      <table className="w-full">
-        <tbody>
-          <tr>
-            <th>OSRS Username</th>
-            <th>Starting Chunk</th>
-            <th>YouTube Channel Name</th>
-          </tr>
-          {chunkers
-            .filter((chunker) => chunker.ruleset === "Vanilla/Casual")
-            .map((chunker) => (
-              <tr key={chunker.yt_channel_name}>
-                <td>
-                  <Link
-                    href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}
-                  >
-                    {chunker.osrs_username}
-                  </Link>
-                </td>
-                <td>{chunker.starting_chunk}</td>
-                <td>
-                  <Link href={chunker.yt_channel_link}>
-                    {chunker.yt_channel_name}
-                  </Link>
-                </td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
-
-      <h2>Supreme</h2>
-      <table className="w-full">
-        <tbody>
-          <tr>
-            <th>OSRS Username</th>
-            <th>Starting Chunk</th>
-            <th>YouTube Channel Name</th>
-          </tr>
-          {chunkers
-            .filter((chunker) => chunker.ruleset === "Supreme")
-            .map((chunker) => (
-              <tr key={chunker.yt_channel_name}>
-                <td>
-                  <Link
-                    href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}
-                  >
-                    {chunker.osrs_username}
-                  </Link>
-                </td>
-                <td>{chunker.starting_chunk}</td>
-                <td>
-                  <Link href={chunker.yt_channel_link}>
-                    {chunker.yt_channel_name}
-                  </Link>
-                </td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
-
-      <h2>Specialized</h2>
-      <table className="w-full">
-        <tbody>
-          <tr>
-            <th>OSRS Username</th>
-            <th>Starting Chunk</th>
-            <th>YouTube Channel Name</th>
-          </tr>
-          {chunkers
-            .filter((chunker) => chunker.ruleset === "Specialized")
-            .map((chunker) => (
-              <tr key={chunker.yt_channel_name}>
-                <td>
-                  <Link
-                    href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}
-                  >
-                    {chunker.osrs_username}
-                  </Link>
-                </td>
-                <td>{chunker.starting_chunk}</td>
-                <td>
-                  <Link href={chunker.yt_channel_link}>
-                    {chunker.yt_channel_name}
-                  </Link>
-                </td>
-              </tr>
-            ))}
-        </tbody>
-      </table> */}
     </main>
   );
 }
