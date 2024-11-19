@@ -18,7 +18,7 @@
 } */
 
 body {
-  @apply text-slate-50 bg-slate-900;
+  @apply text-slate-50 bg-gray-900;
   font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
@@ -39,7 +39,8 @@ h2 {
   margin-bottom: 0.83em;
   margin-left: 0;
   margin-right: 0;
-  font-weight: bold;
+  font-weight: 400;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 h3 {
@@ -64,7 +65,7 @@ h4 {
 
 h5 {
   display: block;
-  font-size: .83em;
+  font-size: 0.83em;
   margin-top: 1.67em;
   margin-bottom: 1.67em;
   margin-left: 0;
@@ -74,13 +75,13 @@ h5 {
 
 h6 {
   display: block;
-  font-size: .67em;
+  font-size: 0.67em;
   margin-top: 2.33em;
   margin-bottom: 2.33em;
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
-} 
+}
 
 a {
   color: #4f7bc8;
@@ -88,5 +89,51 @@ a {
 }
 
 button {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif; 
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-radius: 0.5rem;
+  @apply bg-gray-800 text-slate-300;
+}
+
+tbody {
+  border-radius: 0.5rem;
+}
+
+tbody tr:first-child {
+  font-weight: bold;
+}
+
+th {
+  padding: 0.5rem 0.5rem;
+  @apply bg-gray-950;
+  font-weight: bold;
+}
+
+th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+th p {
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.8rem;
+  @apply text-slate-400;
+}
+
+tr {
+  /* height: 3rem; */
+}
+
+td {
+  padding: 0.8rem 0.5rem;
+}
+
+tbody tr:nth-child(odd) {
+  @apply bg-gray-700;
 }
