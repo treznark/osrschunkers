@@ -1,22 +1,16 @@
-// import Link from "next/link";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faUser,
-//   faGear,
-//   faRightFromBracket,
-// } from "@fortawesome/free-solid-svg-icons";
-
+import Link from "next/link";
 const MainHeader = () => {
   return (
-      <header className='w-full h-10 flex flex-row items-center justify-between text-white'>
-        <h1>OSRS Chunkers</h1>
-        {/* <ul className='flex flex-row gap-10 items-center justify-center'>
-            <li>Extreme Chunkers</li>
-            <li>Vanilla/Casual Chunkers</li>
-            <li>Supreme Chunkers</li>
-            <li>Specialized Chunkers</li>
-        </ul> */}
-      </header>
+    <header className="w-full flex flex-row items-center justify-between text-white px-3 pt-2">
+      <Link href="/" className="text-white">
+        <div className="flex flex-col">
+          <h1 className="m-0 leading-none">OSRS Chunkers</h1>
+          <p className="m-0 text-xs">
+            Follow and Discover OSRS One Chunk Accounts
+          </p>
+        </div>
+      </Link>
+    </header>
   );
 };
 

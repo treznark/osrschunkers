@@ -20,7 +20,7 @@ model Chunker {
   slug      String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  published Boolean  @default(false)
+  published Boolean  @default(true)
   yt_channel_id String
   yt_channel_name String
   yt_subscriber_count Int
