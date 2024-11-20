@@ -64,7 +64,7 @@ function Footer() {
   //   };
 
   return (
-    <div className="flex flex-row gap-2 items-center justify-center border-t-2 border-gray-800 text-gray-600 pt-2">
+    <div className="flex flex-row gap-2 items-center justify-center border-t-2 border-gray-800 text-gray-600 py-2">
       <p>BUILT BY TREZNARK:</p>
       <Link
         href="https://twitter.com/Treznark"

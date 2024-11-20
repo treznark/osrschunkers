@@ -2,14 +2,8 @@ import type { Metadata } from "next";
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import "./globals.css";
-
-// // The following import prevents a Font Awesome icon server-side rendering bug,
-// // where the icons flash from a very large icon down to a properly sized one:
-// import '@fortawesome/fontawesome-svg-core/styles.css';
-// // Prevent fontawesome from adding its CSS since we did it manually above:
-// import { config } from '@fortawesome/fontawesome-svg-core';
-// config.autoAddCss = false; /* eslint-disable import/first */
 
 export const metadata: Metadata = {
   title: "OSRS Chunkers",
