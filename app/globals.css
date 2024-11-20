@@ -101,10 +101,6 @@ tbody {
   border-radius: 0.5rem;
 }
 
-tbody tr:first-child {
-  font-weight: bold;
-}
-
 th {
   padding: 0.5rem 0.5rem;
   @apply bg-gray-950;

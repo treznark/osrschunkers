@@ -27,5 +27,19 @@ model Chunker {
   osrs_username String
   starting_chunk String
   ruleset String
+  videos Video[]
   @@map("chunkers")
+}
+
+model Video {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  chunker Chunker @relation(fields: [chunker_id], references: [id])
+  chunker_id String
+  yt_video_id String
+  yt_video_title String
+  yt_video_description String
+  yt_video_published_at DateTime
+  @@map("videos")
 }
