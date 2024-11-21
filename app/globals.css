@@ -96,7 +96,6 @@ table {
   border-radius: 0.5rem;
   @apply bg-gray-800 text-slate-300;
   overflow-x: scroll;
-  display: block;
 }
 
 tbody {
