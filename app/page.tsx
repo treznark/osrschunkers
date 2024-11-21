@@ -8,7 +8,7 @@ export const revalidate = 60;
 async function getChunkers() {
   const chunkers = await prisma.chunker.findMany({
     where: { published: true },
-    orderBy: { osrs_username: "asc" },
+    orderBy: { yt_channel_name: "asc" },
     include: { videos: true },
   });
   return chunkers;
