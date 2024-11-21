@@ -307,13 +307,16 @@ export default async function Home() {
           <thead>
             <tr>
               <th>
-                <p>OSRS USERNAME</p>
+                <p>VIEW CHUNKER</p>
+              </th>
+              <th>
+                <p>CHANNEL NAME</p>
               </th>
               <th>
                 <p>STARTING CHUNK</p>
               </th>
               <th>
-                <p>YOUTUBE CHANNEL</p>
+                <p>VIDEO COUNT</p>
               </th>
               <th>
                 <p>SUB COUNT</p>
@@ -325,14 +328,15 @@ export default async function Home() {
           </thead>
           <tbody>
             {chunkers.map((chunker) => (
-              <tr key={chunker.yt_channel_name} className="gap-1">
+              <tr key={chunker.id} className="gap-1">
                 <td>
-                  <Link
-                    href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker.osrs_username}`}
-                  >
-                    {chunker.osrs_username}
+                  <Link href={`/${chunker.slug}`} className="text-slate-50">
+                    <button className="bg-blue-500 rounded-md px-2 py-1 hover:bg-blue-600">
+                      View Chunker ››
+                    </button>
                   </Link>
                 </td>
+                <td>{chunker.yt_channel_name}</td>
                 <td>
                   <div className="flex items-center gap-2">
                     <Image
@@ -344,21 +348,7 @@ export default async function Home() {
                     {chunker.starting_chunk}
                   </div>
                 </td>
-                <td>
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src="/img/youtube-icon.png"
-                      alt="chunk"
-                      width={16}
-                      height={16}
-                    />
-                    <Link
-                      href={`https://www.youtube.com/@${chunker.yt_channel_id}`}
-                    >
-                      {chunker.yt_channel_name}
-                    </Link>
-                  </div>
-                </td>
+                <td>{chunker.videos.length}</td>
                 <td>
                   {chunker.yt_subscriber_count.toLocaleString("en-US", {
                     maximumFractionDigits: 2,

@@ -28,6 +28,7 @@ model Chunker {
   starting_chunk String
   ruleset String
   videos Video[]
+  active Boolean @default(true)
   @@map("chunkers")
 }
 
