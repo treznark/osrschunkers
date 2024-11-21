@@ -55,9 +55,9 @@ export default async function Home() {
 
   return (
     <main className="w-full flex flex-col gap-5 p-5">
-      <section className="w-full flex flex-col items-center justify-center border-gray-800 border-b-4 pb-10">
+      <section className="w-full flex flex-col gap-5 items-center justify-center border-gray-800 border-b-4 pb-10">
         <h2 className="w-[350px] text-2xl bg-gray-800 p-5 rounded-md text-center">
-          Latest Chunk Videos
+          Recent Chunk Videos
         </h2>
         <ul className="flex flex-wrap gap-5 items-center justify-center">
           {recentUploads.map((video) => (
@@ -299,7 +299,7 @@ export default async function Home() {
           </tbody>
         </table>
       </section> */}
-      <section className="w-full flex flex-col items-center justify-center border-gray-800 pb-10">
+      <section className="w-full flex flex-col gap-5 items-center justify-center border-gray-800 pb-10">
         <h2 className="w-[350px] text-2xl bg-gray-800 p-5 rounded-md text-center">
           Browse All Chunkers
         </h2>
