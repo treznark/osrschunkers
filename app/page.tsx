@@ -306,8 +306,11 @@ export default async function Home() {
         <table className="w-full">
           <thead>
             <tr>
-              <th>
+              <th className="hidden lg:block">
                 <p>VIEW CHUNKER</p>
+              </th>
+              <th className="lg:hidden">
+                <p>VIEW</p>
               </th>
               <th>
                 <p>CHANNEL NAME</p>
@@ -315,8 +318,11 @@ export default async function Home() {
               <th>
                 <p>STARTING CHUNK</p>
               </th>
-              <th>
+              <th className="hidden lg:block">
                 <p>VIDEO COUNT</p>
+              </th>
+              <th className="lg:hidden">
+                <p>VIDEOS</p>
               </th>
               <th>
                 <p>SUB COUNT</p>
@@ -331,7 +337,16 @@ export default async function Home() {
               <tr key={chunker.id} className="gap-1">
                 <td>
                   <Link href={`/${chunker.slug}`} className="text-slate-50">
-                    <button className="bg-blue-500 rounded-md px-2 py-1 hover:bg-blue-600">
+                    <button className="block lg:hidden bg-blue-500 hover:bg-blue-600 px-2 py-1 rounded-md">
+                      <Image
+                        src="/img/external.png"
+                        alt="link icon"
+                        width={16}
+                        height={16}
+                        className=""
+                      />
+                    </button>
+                    <button className="hidden lg:block bg-blue-500 rounded-md px-2 py-1 hover:bg-blue-600">
                       View Chunker ››
                     </button>
                   </Link>
