@@ -62,31 +62,31 @@ export default async function ChunkerPage({ params }: { params: Params }) {
             <Link
               href={`https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=${chunker?.osrs_username}`}
             >
-              <div className="h-[40px] w-[250px] flex items-center justify-center bg-amber-300 rounded-lg font-bold text-black">
+              <div className="h-[40px] w-[260px] flex items-center justify-center bg-amber-300 rounded-lg font-bold text-black">
                 {chunker?.osrs_username} - OSRS Hiscores
               </div>
             </Link>
-            <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg ">
+            <div className="h-[40px] w-[260px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg ">
               <Image src="/img/chunk.png" alt="chunk" width={16} height={16} />
               {chunker?.starting_chunk}
             </div>
             {chunker?.ruleset === "Supreme" && (
-              <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
+              <div className="h-[40px] w-[260px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
                 Ruleset: 👑 {chunker?.ruleset}
               </div>
             )}
             {chunker?.ruleset === "Extreme" && (
-              <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
+              <div className="h-[40px] w-[260px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
                 Ruleset: 💥 {chunker?.ruleset}
               </div>
             )}
             {chunker?.ruleset === "Vanilla/Casual" && (
-              <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
+              <div className="h-[40px] w-[260px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
                 Ruleset: 🛋️ {chunker?.ruleset}
               </div>
             )}
             {chunker?.ruleset === "Specialized" && (
-              <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
+              <div className="h-[40px] w-[260px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
                 Ruleset: 💫 {chunker?.ruleset}
               </div>
             )}
