@@ -318,11 +318,17 @@ export default async function Home() {
               <th className="hidden lg:table-cell">
                 <p>STARTING CHUNK</p>
               </th>
-              <th>
+              <th className="hidden lg:table-cell">
                 <p>VIDEO COUNT</p>
               </th>
-              <th>
+              <th className="table-cell lg:hidden">
+                <p>VIDS</p>
+              </th>
+              <th className="hidden lg:table-cell">
                 <p>SUB COUNT</p>
+              </th>
+              <th className="table-cell lg:hidden">
+                <p>SUBS</p>
               </th>
               <th>
                 <p>RULESET</p>
