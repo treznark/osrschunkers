@@ -70,24 +70,24 @@ export default async function ChunkerPage({ params }: { params: Params }) {
               <Image src="/img/chunk.png" alt="chunk" width={16} height={16} />
               {chunker?.starting_chunk}
             </div>
-            {chunker.ruleset === "Supreme" && (
+            {chunker?.ruleset === "Supreme" && (
               <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
-                Ruleset: 👑 {chunker.ruleset}
+                Ruleset: 👑 {chunker?.ruleset}
               </div>
             )}
-            {chunker.ruleset === "Extreme" && (
+            {chunker?.ruleset === "Extreme" && (
               <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
-                Ruleset: 💥 {chunker.ruleset}
+                Ruleset: 💥 {chunker?.ruleset}
               </div>
             )}
-            {chunker.ruleset === "Vanilla/Casual" && (
+            {chunker?.ruleset === "Vanilla/Casual" && (
               <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
-                Ruleset: 🛋️ {chunker.ruleset}
+                Ruleset: 🛋️ {chunker?.ruleset}
               </div>
             )}
-            {chunker.ruleset === "Specialized" && (
+            {chunker?.ruleset === "Specialized" && (
               <div className="h-[40px] w-[250px] flex items-center justify-center gap-2 font-bold bg-gray-900 border-2 border-white rounded-lg">
-                Ruleset: 💫 {chunker.ruleset}
+                Ruleset: 💫 {chunker?.ruleset}
               </div>
             )}
           </div>
