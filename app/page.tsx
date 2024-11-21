@@ -303,7 +303,7 @@ export default async function Home() {
         <h2 className="w-[350px] text-2xl bg-gray-800 p-5 rounded-md text-center">
           Browse All Chunkers
         </h2>
-        <table className="w-full">
+        <table className="">
           <thead>
             <tr>
               <th className="hidden lg:block">
@@ -315,14 +315,11 @@ export default async function Home() {
               <th>
                 <p>CHANNEL NAME</p>
               </th>
-              <th>
+              <th className="hidden lg:block">
                 <p>STARTING CHUNK</p>
               </th>
-              <th className="hidden lg:block">
+              <th>
                 <p>VIDEO COUNT</p>
-              </th>
-              <th className="lg:hidden">
-                <p>VIDEOS</p>
               </th>
               <th>
                 <p>SUB COUNT</p>
@@ -352,7 +349,7 @@ export default async function Home() {
                   </Link>
                 </td>
                 <td>{chunker.yt_channel_name}</td>
-                <td>
+                <td className="hidden lg:block">
                   <div className="flex items-center gap-2">
                     <Image
                       src="/img/chunk.png"
