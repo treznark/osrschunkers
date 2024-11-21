@@ -29,7 +29,7 @@ export default async function ChunkerPage({ params }: { params: Params }) {
 
   return (
     <main className="w-full flex flex-col gap-5 p-5">
-      <div className="w-full flex flex-col gap-10 justify-center items-center">
+      <div className="w-full flex flex-col gap-5 justify-center items-center my-5">
         <div className="flex flex-col justify-center items-center bg-gray-800 px-8 pb-8 rounded-md">
           <h1 className="w-[350px] text-4xl p-5 rounded-md text-center m-0">
             {chunker?.yt_channel_name}
