@@ -29,6 +29,9 @@ model Chunker {
   ruleset String
   videos Video[]
   active Boolean @default(true)
+  metaTitle String?
+  metaDescription String?
+  description String?
   @@map("chunkers")
 }
 

@@ -2,6 +2,7 @@ import prisma from "@/helpers/db";
 import Link from "next/link";
 import YouTube from "@/components/YouTube";
 import Image from "next/image";
+import type { Metadata } from "next";
 
 async function getChunker(slug: string) {
   const chunker = await prisma.chunker.findUnique({
@@ -11,9 +12,32 @@ async function getChunker(slug: string) {
   return chunker;
 }
 
-type Params = Promise<{ slug: string }>;
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-export default async function ChunkerPage({ params }: { params: Params }) {
+function convertAorAn(val: string) {
+  return /^[aeiou]/i.test(val) ? "an" : "a";
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = (await params).slug;
+  const chunker = await getChunker(slug);
+  const ruleset = chunker?.ruleset[0].toLowerCase() || "";
+
+  return {
+    title: `${chunker?.yt_channel_name} - OSRS One Chunk Account`,
+    description: `Follow ${
+      chunker?.yt_channel_name
+    }'s progress as ${convertAorAn(
+      ruleset
+    )} ${chunker?.ruleset.toLowerCase()} one chunk account starting in ${
+      chunker?.starting_chunk
+    } in Old School RuneScape.`,
+  };
+}
+
+export default async function ChunkerPage({ params }: Props) {
   const { slug } = await params;
 
   // console.log("SLUG", slug);
