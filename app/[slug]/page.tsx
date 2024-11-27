@@ -55,8 +55,8 @@ export default async function ChunkerPage({ params }: Props) {
     <main className="w-full flex flex-col gap-5 p-5">
       <div className="w-full flex flex-col gap-5 justify-center items-center my-5">
         <div className="flex flex-col justify-center items-center bg-gray-800 px-8 pb-8 rounded-md">
-          <h1 className="w-[350px] text-4xl p-5 rounded-md text-center m-0">
-            {chunker?.yt_channel_name}
+          <h1 className="w-full text-4xl p-5 rounded-md text-center m-0">
+            {chunker?.yt_channel_name} ({chunker?.osrs_username})
           </h1>
           <div className="w-full flex flex-col xl:flex-row gap-5 items-center justify-center xl:flex xl:justify-between">
             <Link
