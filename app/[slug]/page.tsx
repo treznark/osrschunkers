@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ruleset = chunker?.ruleset[0].toLowerCase() || "";
 
   return {
-    title: `${chunker?.yt_channel_name} - OSRS One Chunk Account`,
+    title: `${chunker?.yt_channel_name} (${chunker?.osrs_username}) - OSRS One Chunk Account`,
     description: `Follow ${
       chunker?.yt_channel_name
     }'s progress as ${convertAorAn(
