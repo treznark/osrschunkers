@@ -17,7 +17,7 @@ async function getChunkers() {
 async function getRecentUploads() {
   const videos = await prisma.video.findMany({
     orderBy: { yt_video_published_at: "desc" },
-    take: 12,
+    take: 16,
     include: { chunker: true },
   });
   return videos;
